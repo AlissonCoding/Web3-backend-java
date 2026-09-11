@@ -19,11 +19,11 @@ public class MarcaAguaRepository {
         aguas = new ArrayList<>();
     }
     
-    private static void create(MarcaAgua agua){
+    public static void create(MarcaAgua agua){
         aguas.add(agua);
     }
     
-    private static void update(MarcaAgua agua){
+    public static void update(MarcaAgua agua){
         for(MarcaAgua a: aguas){
             if(a.getNome().equals(agua.getNome())){
                 a.setFonteOrigem(agua.getFonteOrigem());
@@ -33,7 +33,7 @@ public class MarcaAguaRepository {
         }
     }
     
-    private static MarcaAgua read(String nome){
+    public static MarcaAgua read(String nome){
         for(MarcaAgua a: aguas){
             if(a.getNome().equals(nome)){
                 return a;
@@ -42,7 +42,7 @@ public class MarcaAguaRepository {
         return null;
     }
     
-    private static void delete(MarcaAgua agua){
+    public static void delete(MarcaAgua agua){
         aguas.remove(agua);
     }
     
